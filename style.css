@@ -1,0 +1,67 @@
+body{
+    background-color: #b3cdd1;
+    /* background-image: linear-gradient(360deg, #90C5CC 0%, #48718F 50%); */
+    /* background-image: linear-gradient(360deg, #9D8484 0%, #699685 50%); */
+    /* background-image: linear-gradient(360deg, #f2c166cc 0%, #238C6E 50%);  */
+     /* background-image: linear-gradient(315deg, #dfb05acb 0%, #2d666d 60%);  */
+    /* background-image: linear-gradient(315deg, #681825c4 0%,  #082440e3 70%);  */
+    background-image: linear-gradient(315deg, #6d1d35e3 0%,  #292c41 60%); 
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#r5-1{
+    width: 114px;
+} 
+
+#r1-3, #r1-4{
+    width: 10px;
+    border-radius: 5px;
+}
+
+.calculator{
+    border: 1px solid rgb(190, 189, 189);
+    display: inline-block;
+    border-radius: 5px;
+    background-color: rgba(161, 160, 160, 0.171);
+    padding: 10px;
+}
+
+.textbox {
+    width: 272px;
+    color: rgb(235, 232, 232);
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 5px;
+    background: rgba(163, 161, 161, 0.199);
+    font-size: 18px;
+    outline: none;
+    min-height: 55px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.row div {
+    display: inline-block;
+    padding: 20px 10px;
+    width: 45px;
+    margin-top: 5px;
+    background: linear-gradient(#D5CCCC, #b9b9b9e3);
+    color: rgb(54, 54, 54);
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.row div:hover {
+    cursor: pointer;
+    background: linear-gradient(rgb(255, 255, 255), rgb(212, 211, 211));
+}
+.row div:active {
+    background-color: rgb(136, 136, 136);
+}
+
+.operation{
+    background: linear-gradient(#D5CCCC, #681825a8 140%) !important;
+}

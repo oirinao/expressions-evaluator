@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Turret+Road:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <br><br><br>
+    <div class="calculator">
+        <input class="textbox" id="output" value="0">
+        <div class="row">
+            <div id="r1-1" class="operation" onclick="forclear()">C</div>
+            <div id="r1-2" class="operation" onclick="fordelete() ">del</div>
+            <div id="r1-3" class="operation" value="(" onclick="fordisplay('(') ">(</div>
+            <div id="r1-4" class="operation" value=")" onclick="fordisplay(')') ">)</div>
+            <div id="r1-5" class="operation" value="/" onclick="fordisplay('/') ">/</div>
+        </div>
+        <div class="row">
+            <div id="r2-1" value="7" onclick="fordisplay('7') ">7</div>
+            <div id="r2-2" value="8" onclick="fordisplay('8') ">8</div>
+            <div id="r2-3" value="9" onclick="fordisplay('9') ">9</div>
+            <div id="r2-4" class="operation" value="*" onclick="fordisplay('*') ">*</div>
+        </div>
+        <div class="row">
+            <div id="r3-1" value="4" onclick="fordisplay('4') ">4</div>
+            <div id="r3-2" value="5" onclick="fordisplay('5') ">5</div>
+            <div id="r3-3" value="6" onclick="fordisplay('6') ">6</div>
+            <div id="r3-4" class="operation" value="-" onclick="fordisplay('-') ">-</div>
+        </div>
+        <div class="row">
+            <div id="r4-1" value="1" onclick="fordisplay('1') ">1</div>
+            <div id="r4-2" value="2" onclick="fordisplay('2') ">2</div>
+            <div id="r4-3" value="3" onclick="fordisplay('3') ">3</div>
+            <div id="r4-4" class="operation" value="+" onclick="fordisplay('+') ">+</div>
+        </div>
+        <div class="row">
+            <div id="r5-1" value="0" onclick="fordisplay('0') ">0</div>
+            <div id="r5-2" value="." onclick="fordisplay('.') ">.</div>
+            <div id="r5-3" class="operation" value="=" onclick="solve() ">=</div>
+        </div>
+    </div>
+    <script type="text/javascript" src="sy.js"></script>
+    <script type="text/javascript" src="sy2.js"></script>
+    <script type="text/javascript" src="calculator.js"></script>
+
+</body>
+
+</html>
