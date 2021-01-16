@@ -12,14 +12,22 @@ function solve(){
     let infix = input("output");
     //console.log(infix);
 
+    var start = performance.now();
+
     if (validate(infix)){
-        let postfix = toPostfix(infix);
+        let postfix = toPostfix(infix); //transformam din infix in postfix
         console.log(postfix);
 
-        let output = calculate(postfix);
-        console.log(output);
+        let output = calculate(postfix); //calculam expresia data in postfix
         document.getElementById("output").value = output;
+        console.log(output);
     }
+
+    var end = performance.now();
+    var resultTime = (end - start).toFixed(5);
+
+	let textResult = "Time = " + resultTime + " ms";
+	document.getElementById('result').innerHTML = textResult;
 }
 
 function input(input){
@@ -63,7 +71,7 @@ function toPostfix(infix){
             output.push(getNumberAsString(infix));
         }  
         else if (isOperator(infix)) {
-            push(infix[i]);
+            push(infix[i]); //push to stack
         }
         else if (infix[i] == '(') {
             push(infix[i]);
@@ -85,13 +93,14 @@ function toPostfix(infix){
     return output;
 }
 
-function calculate(output){
+function calculate(output){ //coada
     while(output.length > 0) {
-        if (!isNaN(parseFloat(output[0]))){
-            let nr = parseFloat(output.shift());
-            resultStack.push(nr);
+        if (!isNaN(parseFloat(output[0]))){ //daca e numar
+            let nr = parseFloat(output.shift()); //il stergem din coada
+            resultStack.push(nr); //si il adaugam in stiva
         }
         else{
+            //efectuam operatia necesara de pe prima pozitie a cozii dintre primele 2 elemente din stiva
             operate(peek(resultStack), output[0], resultStack[resultStack.length - 2]);
             output.shift();
             resultStack.pop();

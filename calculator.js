@@ -1,10 +1,16 @@
 function fordelete(){
     let output = document.getElementById("output").value;
     document.getElementById("output").value = output.substr(0, output.length - 1);
+
+    let textResult = "Time = 0.00 ms";
+	document.getElementById('result').innerHTML = textResult;
 }
 
 function forclear(){
     document.getElementById("output").value = "0";
+
+    let textResult = "Time = 0.00 ms";
+	document.getElementById('result').innerHTML = textResult;
 }
 
 function removeZero() {
@@ -19,7 +25,6 @@ function fordisplay(value) {
     removeZero();
     document.getElementById("output").value += value;
 }
-
 
 var outputSelector  = document.getElementById("output");
 outputSelector.addEventListener("keyup", function (event) {
