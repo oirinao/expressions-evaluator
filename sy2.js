@@ -12,22 +12,28 @@ function solve(){
     let infix = input("output");
     //console.log(infix);
 
-    var start = performance.now();
+    if (infix.length != 0){
+        var start = performance.now();
+        
+        if (validate(infix)){
+            let postfix = toPostfix(infix); //transformam din infix in postfix
+            console.log(postfix);
+    
+            let output = calculate(postfix); //calculam expresia data in postfix
+            document.getElementById("output").value = output;
+            console.log(output);
+        }
+        
+        var end = performance.now();
+        var resultTime = (end - start).toFixed(5);
 
-    if (validate(infix)){
-        let postfix = toPostfix(infix); //transformam din infix in postfix
-        console.log(postfix);
-
-        let output = calculate(postfix); //calculam expresia data in postfix
-        document.getElementById("output").value = output;
-        console.log(output);
+	    let textResult = "Time = " + resultTime + " ms";
+	    document.getElementById('result').innerHTML = textResult;
     }
+    else {
+        alert("Introduce please an expresion");
+    }    
 
-    var end = performance.now();
-    var resultTime = (end - start).toFixed(5);
-
-	let textResult = "Time = " + resultTime + " ms";
-	document.getElementById('result').innerHTML = textResult;
 }
 
 function input(input){
